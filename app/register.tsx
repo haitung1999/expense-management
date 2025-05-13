@@ -1,17 +1,17 @@
-// app/login.tsx
+// app/register.tsx
 import React, { useState } from "react";
 import { Button, StyleSheet, Text, TextInput, View } from "react-native";
 
-export default function LoginScreen() {
+export default function RegisterScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleLogin = async () => {};
+  const handleRegister = async () => {};
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Login</Text>
+      <Text style={styles.title}>Register</Text>
       <TextInput
         style={styles.input}
         placeholder="Email"
@@ -26,8 +26,8 @@ export default function LoginScreen() {
         onChangeText={setPassword}
       />
       {error ? <Text style={styles.error}>{error}</Text> : null}
-      <Button title="Login" onPress={handleLogin} />
-      <Button title="Don't have an account? Register" />
+      <Button title="Register" onPress={handleRegister} />
+      <Button title="Already have an account? Login" />
     </View>
   );
 }
